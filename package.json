@@ -1,0 +1,17 @@
+{
+  "name": "openai-api-test",
+  "module": "openai.ts",
+  "type": "module",
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@langchain/core": "^0.1.8",
+    "cheerio": "^1.0.0-rc.12",
+    "colors": "^1.4.0",
+    "langchain": "^0.0.214"
+  }
+}
