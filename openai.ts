@@ -3,10 +3,10 @@
 // remove unhighlighted comments to run script of your choice
 import { ChatOpenAI } from "@langchain/openai";
 import { ChatPromptTemplate } from "@langchain/core/prompts";
-import basicInvocation from "./functions/openAI/basicInvocation";
-import basicTemplateInvocation from "./functions/openAI/basicTemplateInvocation";
-import basicTemplateWithParser from "./functions/openAI/basicTemplateWithParser";
-import retrievalWithCheerio from "./functions/openAI/retrievalWithCheerio";
+import basicInvocation from "./functions/basicInvocation";
+import basicTemplateInvocation from "./functions/openAiSpecific/basicTemplateInvocation";
+import basicTemplateWithParser from "./functions/openAiSpecific/basicTemplateWithParser";
+import retrievalWithCheerio from "./functions/openAiSpecific/retrievalWithCheerio";
 
 // * environment variables
 // save your OpenAI API key in .env file as OPENAI=your_api_key
@@ -20,7 +20,7 @@ if (!OPEN_AI_KEY) {
 const chatModel = new ChatOpenAI({ openAIApiKey: OPEN_AI_KEY });
 
 // * Basic invocation
-// basicInvocation(chatModel, "What is LangSmith? Explain in 1 sentence.");
+basicInvocation(chatModel, "What is LangSmith? Explain in 1 sentence.");
 
 // * Basic template invocation
 // * pipe is used to connect data streams and provide data as it becomes available
