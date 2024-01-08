@@ -9,8 +9,11 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
+    "@langchain/community": "^0.0.15",
     "@langchain/core": "^0.1.8",
     "@langchain/google-genai": "^0.0.7",
+    "@langchain/openai": "^0.0.10",
+    "@supabase/supabase-js": "^2.39.2",
     "cheerio": "^1.0.0-rc.12",
     "colors": "^1.4.0",
     "langchain": "^0.0.214"

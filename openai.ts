@@ -2,11 +2,10 @@
 // install Better Comments extension for VSCode if you want to see the comments in colors properly
 // remove unhighlighted comments to run script of your choice
 import { ChatOpenAI } from "@langchain/openai";
-import { ChatPromptTemplate } from "@langchain/core/prompts";
 import basicInvocation from "./functions/basicInvocation";
 import basicTemplateInvocation from "./functions/openAiSpecific/basicTemplateInvocation";
 import basicTemplateWithParser from "./functions/openAiSpecific/basicTemplateWithParser";
-import retrievalWithCheerio from "./functions/openAiSpecific/retrievalWithCheerio";
+import retrievalWithCheerio from "./functions/openAiSpecific/withCheerio/retrievalWithCheerio";
 
 // * environment variables
 // save your OpenAI API key in .env file as OPENAI=your_api_key
@@ -24,10 +23,10 @@ basicInvocation(chatModel, "What is LangSmith? Explain in 1 sentence.");
 
 // * Basic template invocation
 // * pipe is used to connect data streams and provide data as it becomes available
-// basicTemplateInvocation(chatModel, "What is LangSmith? Explain in 1 sentence.");
+basicTemplateInvocation(chatModel, "What is LangSmith? Explain in 1 sentence.");
 
 // * Basic template invocation with parser
-// basicTemplateWithParser(chatModel, "What is LangSmith?");
+basicTemplateWithParser(chatModel, "What is LangSmith?");
 
 // * Retrieval with Cheerio
-// retrievalWithCheerio(chatModel, "What is LangSmith?", OPEN_AI_KEY);
+retrievalWithCheerio(chatModel, "What is LangSmith?", OPEN_AI_KEY);
